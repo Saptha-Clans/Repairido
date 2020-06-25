@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/baseline_dashboard_black_18dp"
+        android:title="@string/nav_dashboard"
+        android:enabled="true"
+        app:showAsAction="withText|always"  />
+    <item
+        android:id="@+id/ongoing"
+        android:icon="@drawable/baseline_alarm_black_18dp"
+        android:title="@string/nav_ongoing"
+        android:enabled="true"
+        app:showAsAction="withText|always" />
+
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/baseline_history_black_18dp"
+        android:title="@string/nav_history"
+        android:enabled="true"
+        app:showAsAction="withText|always"  />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_person_black_18dp_2"
+        android:title="@string/nav_profile"
+        android:enabled="true"
+        app:showAsAction="withText|always" />
+</menu>
