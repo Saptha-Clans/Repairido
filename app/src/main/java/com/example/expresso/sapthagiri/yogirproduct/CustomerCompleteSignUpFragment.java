@@ -55,11 +55,11 @@ public class CustomerCompleteSignUpFragment extends Fragment {
         return rootView;
     }
 
-    @Override
+    /*@Override
     public void onResume() {
         super.onResume();
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Sign up");
-    }
+    }*/
 
 
 }

@@ -11,9 +11,9 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/dashboardRecyclerView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="694dp"
         android:layout_marginBottom="2dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,21 +25,21 @@
         android:id="@+id/requestIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/loginButtonBlue"
         android:src="@drawable/ic_add_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/dashboardRecyclerView"
         app:layout_constraintTop_toBottomOf="@+id/dashboardRecyclerView"
-        app:layout_constraintVertical_bias="0.742" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginBottom="13dp"
-        android:background="#ccc"
+        android:layout_height="23dp"
+        android:background="#F7F3F3"
         app:layout_constraintBottom_toTopOf="@+id/dashboardRecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -51,14 +51,14 @@
             android:id="@+id/filterLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="345dp"
             android:text="Filter"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.48000002" />
 
     </android.support.constraint.ConstraintLayout>
 

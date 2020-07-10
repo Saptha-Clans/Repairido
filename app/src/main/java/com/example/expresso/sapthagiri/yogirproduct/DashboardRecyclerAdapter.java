@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,7 +17,8 @@ import java.util.ArrayList;
 public class DashboardRecyclerAdapter extends RecyclerView.Adapter<DashboardRecyclerAdapter.ViewHolder> {
 
     private ArrayList<DashboardGetterSetter> mDataset = new ArrayList<>();
-    ConstraintLayout constraintLayout;
+    //ConstraintLayout constraintLayout;
+    private String rate;
 
     public DashboardRecyclerAdapter(ArrayList<DashboardGetterSetter> mDataset) {
         this.mDataset = mDataset;
@@ -24,8 +26,13 @@ public class DashboardRecyclerAdapter extends RecyclerView.Adapter<DashboardRecy
 
     Context context;
 
+    public DashboardRecyclerAdapter(Context context) {
+        this.context = context;
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView contract_name, contractor_category, contractor_specialize;
+        TextView contract_name, contractor_category, contractor_specialize;
+        RatingBar contractor_rating;
         ConstraintLayout constraintLayout;
 
         ImageView contractor_image;
@@ -37,6 +44,9 @@ public class DashboardRecyclerAdapter extends RecyclerView.Adapter<DashboardRecy
             contractor_category = v.findViewById(R.id.contractorCategory);
             contractor_specialize = v.findViewById(R.id.contractorSpecialize);
             contractor_image = v.findViewById(R.id.contractorImage);
+            contractor_rating = v.findViewById(R.id.contractorRating);
+
+
         }
     }
 
@@ -54,22 +64,39 @@ public class DashboardRecyclerAdapter extends RecyclerView.Adapter<DashboardRecy
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        final View v=null;
         final DashboardGetterSetter dashboardGetterSetter = mDataset.get(position);
         holder.contract_name.setText(dashboardGetterSetter.getContractor_name());
         holder.contractor_category.setText(dashboardGetterSetter.getContractor_category());
         holder.contractor_specialize.setText(dashboardGetterSetter.getContractor_specialize());
         //holder.contractor_image.setImageDrawable(context.getResources().getDrawable(dashboardGetterSetter.getContractor_image()));
         holder.contractor_image.setImageResource(dashboardGetterSetter.getContractor_image());
+        holder.contractor_rating.setRating(dashboardGetterSetter.getRatingBar());
 
+        /*holder.contractor_rating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                //System.out.println("****String.valueOf(rating)*****" + String.valueOf(rating));
+                //System.out.println("****String.valueOf(rating)*****" + holder.contractor_rating.getRating());
+                rate = String.valueOf(rating);
+
+            }
+        });*/
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "Clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(v.getContext(), ContactorProfilePage.class);
                 intent.putExtra("Image", dashboardGetterSetter.getContractor_image());
+                intent.putExtra("Rating", dashboardGetterSetter.getRatingBar());
                 v.getContext().startActivity(intent);
             }
         });
+
+        /*Intent intent = new Intent();
+        String checks = String.valueOf(intent.getIntExtra("check", 0));
+        holder.contractor_specialize.setText(checks);*/
+
     }
 
     @Override

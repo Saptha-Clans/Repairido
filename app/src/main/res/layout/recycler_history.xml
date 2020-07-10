@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ccc"
     android:padding="10dp">
 
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="149dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="#F7F3F3"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,17 +24,15 @@
         <android.support.constraint.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <TextView
                 android:id="@+id/textTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="18dp"
-                android:layout_marginEnd="257dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:ems="5"
                 android:text="Request title"
                 android:textColor="@color/textBlackColor"
@@ -40,42 +40,41 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textDescription"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintHorizontal_bias="0.12"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.41000003" />
 
             <TextView
                 android:id="@+id/textDescription"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="48dp"
-                android:layout_marginStart="47dp"
-                android:layout_marginTop="52dp"
+                android:layout_marginBottom="8dp"
                 android:ems="10"
+                android:maxLines="3"
                 android:text="Succes unsuccessful people are not willing to do. Don't wish it were easier; wish you were better."
                 android:textColor="@color/textBlackColor"
                 android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/contractorProfile"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.154"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/textTitle" />
 
             <Button
                 android:id="@+id/contractorProfile"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginEnd="7dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:minHeight="0dp"
                 android:text="View contractor profile"
                 android:textAllCaps="false"
                 android:textColor="@color/loginButtonBlue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/writeReview"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textDescription" />
 
@@ -84,18 +83,18 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginEnd="69dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:minHeight="0dp"
                 android:text="Write/Edit review"
                 android:textAllCaps="false"
                 android:textColor="@color/loginButtonBlue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/contractorProfile"
-                app:layout_constraintTop_toBottomOf="@+id/textDescription" />
+                app:layout_constraintTop_toBottomOf="@+id/textDescription"
+                app:layout_constraintVertical_bias="1.0" />
 
         </android.support.constraint.ConstraintLayout>
 

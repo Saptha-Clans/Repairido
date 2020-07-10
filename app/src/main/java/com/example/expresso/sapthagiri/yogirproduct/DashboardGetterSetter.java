@@ -1,14 +1,18 @@
 package com.example.expresso.sapthagiri.yogirproduct;
 
 public class DashboardGetterSetter {
-    String contractor_name, contractor_category, contractor_specialize;
+    String contractor_name;
+    String contractor_category;
+    String contractor_specialize;
+    Float rating_bar;
     int contractor_image;
 
-    public DashboardGetterSetter(String contractor_name, String contractor_category, String contractor_specialize, int contractor_image) {
+    public DashboardGetterSetter(String contractor_name, String contractor_category, String contractor_specialize, int contractor_image, Float rating_bar) {
         this.contractor_name = contractor_name;
         this.contractor_category = contractor_category;
         this.contractor_specialize = contractor_specialize;
         this.contractor_image = contractor_image;
+        this.rating_bar = rating_bar;
     }
 
     public int getContractor_image() {
@@ -41,5 +45,13 @@ public class DashboardGetterSetter {
 
     public void setContractor_specialize(String contractor_specialize) {
         this.contractor_specialize = contractor_specialize;
+    }
+
+    public Float getRatingBar() {
+        return rating_bar;
+    }
+
+    public void setRatingBar(Float rating_bar) {
+        this.rating_bar = rating_bar;
     }
 }

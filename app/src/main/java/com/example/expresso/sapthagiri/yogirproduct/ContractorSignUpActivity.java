@@ -28,11 +28,11 @@ public class ContractorSignUpActivity extends AppCompatActivity implements Contr
     }
 
 
-    @Override
+    /*@Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         setContentView(R.layout.fragment_contractor_sign_up);
         //setContentView(R.layout.fragment_contractor_complete_sign_up);
-    }
+    }*/
 
 }

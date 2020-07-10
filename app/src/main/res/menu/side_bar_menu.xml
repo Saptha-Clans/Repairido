@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/about_yrt"
+            android:icon="@drawable/adiyogi"
+            android:title="@string/about_yogi_r" />
+
+        <item
+            android:id="@+id/products"
+            android:icon="@drawable/products_and_services"
+            android:title="@string/products_and_services" />
+
+        <item
+            android:id="@+id/support"
+            android:icon="@drawable/support"
+            android:title="@string/support" />
+
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/share"
+                android:title="@string/share" />
+
+            <item
+                android:id="@+id/send"
+                android:icon="@drawable/ic_send"
+                android:title="@string/send" />
+        </menu>
+
+    </item>
+
+
+</menu>

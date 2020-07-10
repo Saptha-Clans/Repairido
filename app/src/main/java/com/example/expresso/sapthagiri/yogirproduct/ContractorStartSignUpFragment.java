@@ -167,11 +167,11 @@ public class ContractorStartSignUpFragment extends Fragment {
         }
     }
 
-    @Override
+    /*@Override
     public void onResume() {
         super.onResume();
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Sign up");
-    }
+    }*/
 
 
 }

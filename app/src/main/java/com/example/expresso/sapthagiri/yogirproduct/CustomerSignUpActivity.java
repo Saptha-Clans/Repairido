@@ -31,7 +31,7 @@ public class CustomerSignUpActivity extends AppCompatActivity implements Custome
                 .replace(R.id.start_sign_up, customerCompleteSignUpFragment).addToBackStack(null).commit();
     }
 
-    @Override
+    /*@Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         setContentView(R.layout.fragment_sign_up);
@@ -43,7 +43,7 @@ public class CustomerSignUpActivity extends AppCompatActivity implements Custome
         }else if(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             //view = inflater.inflate(R.layout.fragment_sign_up, null);
         }
-    }
+    }*/
 
 
 }

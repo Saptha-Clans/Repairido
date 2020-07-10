@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="171dp"
+    android:background="@drawable/gradient_bg"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/companyIcon"
+        android:layout_width="118dp"
+        android:layout_height="76dp"
+        android:src="@drawable/adiyogi" />
+
+    <TextView
+        android:id="@+id/yogiTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="22dp"
+        android:paddingTop="8dp"
+        android:text="Yogi R Tech"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="www.yogirtech.com" />
+
+</LinearLayout>

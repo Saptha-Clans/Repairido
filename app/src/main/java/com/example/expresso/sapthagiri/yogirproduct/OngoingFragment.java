@@ -41,6 +41,7 @@ public class OngoingFragment extends Fragment {
             //reviews.add("Fact: Successful people do what unsuccessful people are not willing to do. Don't wish it were easier; wish you were better.");
         }
         recyclerView = view.findViewById(R.id.ongoingRecyclerView);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new OngoingRecyclerAdapter(this, reviews);
         recyclerView.setAdapter(adapter);
