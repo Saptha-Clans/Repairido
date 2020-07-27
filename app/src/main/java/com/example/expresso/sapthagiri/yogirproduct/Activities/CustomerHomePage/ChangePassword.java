@@ -78,9 +78,9 @@ public class ChangePassword extends AppCompatActivity {
                 if (!response.isSuccessful()) {
                     System.out.println("Response Code: " + response.code());
                     System.out.println("response.body(): " + response.body());
-
-                    PasswordGetter responseBody = response.body();
-                    System.out.println("response.body(): " + responseBody.getError_message());
+                    customer_password.setError("Email and password combination is not correct");
+                    //PasswordGetter responseBody = response.body();
+                    //System.out.println("response.body(): " + responseBody.getError_message());
 
                     return;
                 } else {
