@@ -5,44 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7F3F3"
-    tools:context=".ProfileFragment">
+    tools:context=".Fragments.CustomerHomePage.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profileCircleImage"
-        android:layout_width="141dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/profileContraintLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="500dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginStart="56dp"
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="262dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/gradient_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/profileRecyclerView"
-            android:layout_width="301dp"
-            android:layout_height="0dp"
-            android:background="#F7F3F3"
+        <!-- TODO: Update blank fragment layout -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileCircleImage"
+            android:layout_width="141dp"
+            android:layout_height="135dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.417" />
+
 
     </android.support.constraint.ConstraintLayout>
 
@@ -50,14 +39,18 @@
         android:id="@+id/cardView2"
         android:layout_width="0dp"
         android:layout_height="157dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="184dp"
         app:cardBackgroundColor="#F7F3F3"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/profileContraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileCircleImage">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -72,7 +65,7 @@
                 android:textColor="@color/textBlackColor"
                 app:layout_constraintBottom_toTopOf="@+id/phoneNumber"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.64"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,12 +73,12 @@
                 android:id="@+id/phoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="8"
                 android:text="9987128982"
                 android:textColor="@color/textBlackColor"
                 app:layout_constraintBottom_toTopOf="@+id/email"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.54"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fullName" />
 
@@ -98,7 +91,7 @@
                 android:textColor="@color/textBlackColor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.576"
+                app:layout_constraintHorizontal_bias="0.75"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
 
@@ -119,16 +112,12 @@
                 android:id="@+id/editFullNamel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-                android:layout_marginEnd="71dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="6dp"
                 android:ems="10"
                 android:hint="Full Name"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toTopOf="@+id/editButton"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.945"
+                app:layout_constraintHorizontal_bias="0.616"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
@@ -137,8 +126,6 @@
                 android:id="@+id/editPhoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="16dp"
                 android:ems="10"
                 android:hint="Phone number"
                 android:inputType="phone"
@@ -153,14 +140,13 @@
                 android:id="@+id/editEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.576"
+                app:layout_constraintHorizontal_bias="0.585"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editPhoneNumber" />
 
@@ -169,10 +155,7 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="47dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginEnd="2dp"
                 android:src="@drawable/baseline_get_app_black_36dp"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -185,8 +168,7 @@
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="11dp"
-                android:layout_marginStart="13dp"
+                android:layout_marginStart="4dp"
                 android:ems="4"
                 android:text="Name"
                 android:textColor="@color/textBlackColor"
@@ -202,8 +184,7 @@
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="4dp"
                 android:ems="6"
                 android:text="Phone Number"
                 android:textColor="@color/textBlackColor"
@@ -218,20 +199,46 @@
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="2dp"
                 android:ems="4"
                 android:text="Email"
                 android:textColor="@color/textBlackColor"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/editEmail"
-                app:layout_constraintHorizontal_bias="0.133"
+                app:layout_constraintHorizontal_bias="0.11"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/profileContraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="326dp"
+
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/profileRecyclerView"
+            android:layout_width="301dp"
+            android:layout_height="0dp"
+            android:background="#F7F3F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>

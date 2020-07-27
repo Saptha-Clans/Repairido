@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ServiceRequest.ServiceAddress">
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/your_state_progress_bar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055"
+        app:spb_animateToCurrentProgressState="false"
+        app:spb_checkStateCompleted="true"
+        app:spb_currentStateDescriptionColor="@color/textBlackColor"
+        app:spb_currentStateNumber="two"
+        app:spb_maxStateNumber="three"
+        app:spb_stateBackgroundColor="#009688"
+        app:spb_stateDescriptionColor="#808080"
+        app:spb_stateForegroundColor="@color/loginButtonBlue"
+        app:spb_stateNumberBackgroundColor="#eeeeee"
+        app:spb_stateNumberForegroundColor="#eeeeee" />
+
+    <Button
+        android:id="@+id/addNewAddress"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/button_border"
+        android:drawableRight="@drawable/sharp_keyboard_arrow"
+        android:text="@string/add_a_new_address"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/addressRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_state_progress_bar_id"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/addressRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNewAddress" />
+
+</android.support.constraint.ConstraintLayout>

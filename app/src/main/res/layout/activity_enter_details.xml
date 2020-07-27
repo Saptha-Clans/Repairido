@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ServiceRequest.ServiceDetails">
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/your_state_progress_bar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:spb_animateToCurrentProgressState="false"
+        app:spb_checkStateCompleted="true"
+        app:spb_currentStateDescriptionColor="@color/textBlackColor"
+        app:spb_currentStateNumber="one"
+        app:spb_maxStateNumber="three"
+        app:spb_stateBackgroundColor="#009688"
+        app:spb_stateDescriptionColor="#808080"
+        app:spb_stateForegroundColor="@color/loginButtonBlue"
+        app:spb_stateNumberBackgroundColor="#eeeeee"
+        app:spb_stateNumberForegroundColor="#eeeeee" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/selectService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColorHint="@color/textBlackColor"
+        app:layout_constraintBottom_toTopOf="@+id/serviceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_state_progress_bar_id"
+        app:layout_constraintVertical_bias="0.51">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteService"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:hint="@string/select_service"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/your_state_progress_bar_id"
+            app:layout_constraintVertical_bias="0.18" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/serviceTitle"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/textBlackColor"
+        app:layout_constraintBottom_toTopOf="@+id/serviceDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectService">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/serviceDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/textBlackColor"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceTitle">
+
+        <TextView
+            android:id="@+id/attachFileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Attach files" />
+
+        <ImageButton
+            android:id="@+id/attachFile"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/attach_file" />
+
+        <EditText
+            android:id="@+id/textDescription"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="357dp" />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/button_round_shape"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/loginWhiteColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceDescription"
+        app:layout_constraintVertical_bias="0.849" />
+
+    <Button
+        android:id="@+id/attachmentOne"
+        android:layout_width="62dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="56dp"
+        android:background="@drawable/button_round_shape"
+        android:drawableRight="@drawable/close"
+        android:maxLength="4"
+        android:text=""
+        android:textColor="@color/loginWhiteColor"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/attachmentTwo"
+        app:layout_constraintEnd_toStartOf="@+id/attachmentTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/attachmentTwo"
+        android:layout_width="62dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/button_round_shape"
+        android:drawableRight="@drawable/close"
+        android:maxLength="4"
+        android:text=""
+        android:textColor="@color/loginWhiteColor"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/attachmentThree"
+        app:layout_constraintEnd_toStartOf="@+id/attachmentThree"
+        app:layout_constraintStart_toEndOf="@+id/attachmentOne" />
+
+    <Button
+        android:id="@+id/attachmentThree"
+        android:layout_width="62dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/button_round_shape"
+        android:drawableRight="@drawable/close"
+        android:maxLength="4"
+        android:text=""
+        android:textColor="@color/loginWhiteColor"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/attachmentFour"
+        app:layout_constraintEnd_toStartOf="@+id/attachmentFour"
+        app:layout_constraintStart_toEndOf="@+id/attachmentTwo" />
+
+    <Button
+        android:id="@+id/attachmentFour"
+        android:layout_width="62dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/button_round_shape"
+        android:drawableRight="@drawable/close"
+        android:maxLength="4"
+        android:text=""
+        android:textColor="@color/loginWhiteColor"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/attachmentFive"
+        app:layout_constraintEnd_toStartOf="@+id/attachmentFive"
+        app:layout_constraintStart_toEndOf="@+id/attachmentThree" />
+
+    <Button
+        android:id="@+id/attachmentFive"
+        android:layout_width="62dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/button_round_shape"
+        android:drawableRight="@drawable/close"
+        android:maxLength="4"
+        android:text=""
+        android:textColor="@color/loginWhiteColor"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/attachmentFour"
+        app:layout_constraintTop_toBottomOf="@+id/serviceDescription"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+</android.support.constraint.ConstraintLayout>

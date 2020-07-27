@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ServiceRequest.EmailVerification">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/emailVerificationAnim"
+        android:layout_width="match_parent"
+        android:layout_height="308dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:lottie_fileName="email_sent.json"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:lottie_progress="4.0"
+        app:lottie_colorFilter="@color/loginButtonBlue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/button_round_shape"
+        android:text="Return to Login page"
+        android:textAllCaps="false"
+        android:textColor="@color/loginWhiteColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:layout_marginStart="16dp"
+        android:ems="15"
+        android:maxLines="2"
+        android:text="We have sent you a verfication email. Please verify to activate the account"
+        android:textColor="@color/textBlackColor"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailVerificationAnim" />
+
+</android.support.constraint.ConstraintLayout>

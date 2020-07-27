@@ -3,17 +3,20 @@
     package="com.example.expresso.sapthagiri.yogirproduct">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:name=".Activities.AppLaunch.SplashScreen"
+            android:label="Repairido"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -23,50 +26,60 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CustomerSignUpActivity"
+            android:name=".Activities.AppLaunch.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.SignUpPage.CustomerSignUpActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ContractorSignUpActivity"
+            android:name=".Activities.SignUpPage.ContractorSignUpActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".CustomerHomePage"
+            android:name=".Activities.CustomerHomePage.CustomerHomePage"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ContactorProfilePage"
+            android:name=".Activities.CustomerHomePage.ContactorProfilePage"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OngoingViewDetails"
+            android:name=".Activities.CustomerHomePage.OngoingViewDetails"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".HistoryEditReview"
+            android:name=".Activities.CustomerHomePage.HistoryEditReview"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OnClickProfileViews"
+            android:name=".Activities.CustomerHomePage.OnClickProfileViews"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".AddNewAddress"
+            android:name=".Activities.CustomerHomePage.AddNewAddress"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:parentActivityName=".ProfileManageAdressFragment"
+            android:parentActivityName=".Fragments.CustomerHomePage.ProfileManageAdressFragment"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ProfileManageAdressFragment"
+            android:name=".Fragments.CustomerHomePage.ProfileManageAdressFragment"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:parentActivityName=".OnClickProfileViews"
+            android:parentActivityName=".Activities.CustomerHomePage.OnClickProfileViews"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".EditNewAddress" />
-        <activity android:name=".ChangePassword" />
-        <activity android:name=".PersonalInformation" />
-
+        <activity android:name=".Activities.CustomerHomePage.EditNewAddress" />
+        <activity android:name=".Activities.CustomerHomePage.ChangePassword" />
+        <activity android:name=".Activities.CustomerHomePage.PersonalInformation" />
+        <activity android:name=".Activities.ServiceRequest.ServiceDetails" />
+        <activity android:name=".Activities.ServiceRequest.ServiceAddress" />
+        <activity android:name=".Activities.ServiceRequest.ServiceTime" />
+        <activity android:name=".Activities.ServiceRequest.EmailVerification" />
+        <activity android:name=".Activities.ServiceRequest.ServiceRequested" />
+        <activity android:name=".Activities.AppLaunch.ForgotPassword" />
+        <activity android:name=".Activities.AppLaunch.VerifyEmail"></activity>
     </application>
 
 </manifest>

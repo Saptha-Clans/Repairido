@@ -8,4 +8,5 @@
     <color name="textBlackColor">#000000</color>
     <color name="registerBlueColor">#0000FF</color>
     <color name="textBoxColor">#D3D3D3</color>
+    <color name="signUpColor">#00994C</color>
 </resources>
